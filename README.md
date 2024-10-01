@@ -1,6 +1,6 @@
 # 🍳 Food Recipe App
 
-The website is held on :
+The website is held on : https://dweep-js.github.io/recipe/
 
 
 Welcome to the **Food Recipe App**! This web application allows users to search for recipes and view detailed meal information, including ingredients and cooking instructions. Built using HTML, CSS, and JavaScript, this app fetches data from TheMealDB API.
