@@ -1,5 +1,8 @@
 # 🍳 Food Recipe App
 
+The website is held on :
+
+
 Welcome to the **Food Recipe App**! This web application allows users to search for recipes and view detailed meal information, including ingredients and cooking instructions. Built using HTML, CSS, and JavaScript, this app fetches data from TheMealDB API.
 
 ## 🌟 Features
@@ -27,8 +30,3 @@ Welcome to the **Food Recipe App**! This web application allows users to search 
 - A web browser (Chrome, Firefox, Safari, etc.)
 
 ### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/food-recipe-app.git
