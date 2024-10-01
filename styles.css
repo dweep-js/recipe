@@ -1,0 +1,211 @@
+/* Importing Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header {
+    color: #ffdd57; /* Bright yellow for the header */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger header */
+    transition: color 0.3s ease; /* Color transition */
+}
+
+#header:hover {
+    color: #ffd700; /* Hover effect for header */
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ff6347; /* Coral border */
+    border-radius: 5px;
+    width: 250px; /* Increased width */
+    margin-right: 10px;
+    background-color: #2b2b2b; /* Dark input background */
+    color: #ffffff; /* Light text color */
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease; /* Smooth transition */
+}
+
+input:focus {
+    background-color: #4d4d4d; /* Darker input background on focus */
+    border-color: #ffdd57; /* Bright yellow border on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: #ff6347; /* Coral button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* Added box-shadow transition */
+    animation: pop-in 0.5s ease; /* Button pop-in effect */
+}
+
+button:hover {
+    background-color: #ff5050; /* Darker coral on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    animation: shake 0.3s ease; /* Shake effect on hover */
+    box-shadow: 0 4px 15px rgba(255, 99, 71, 0.5); /* Shadow on hover */
+}
+
+@keyframes pop-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-2px, 0);
+    }
+    50% {
+        transform: translate(2px, 0);
+    }
+    75% {
+        transform: translate(-2px, 0);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.card {
+    display: none; /* Initially hidden */
+    border: 1px solid #ff6347; /* Coral border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: -30px; /* Move card closer to the search button */
+    background-color: #2b2b2b; /* Dark card background */
+    color: #ffffff; /* Light text color */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    width: 300px;
+    text-align: center;
+    transition:
+        opacity 0.5s ease,
+        transform 0.3s ease; /* Smooth fade-in and transform */
+    transform: scale(0.95); /* Initial scale for entry animation */
+}
+
+.card.show {
+    display: block; /* Show the card */
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Scale to original size */
+}
+
+.card img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Set a maximum width for the image */
+    border-radius: 10px; /* Rounded corners for the image */
+    animation: fade-in 0.5s ease; /* Animation on image appearance */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2,
+h3 {
+    color: #ffdd57; /* Bright yellow for headings */
+    font-size: 1.4em; /* Larger font size */
+    margin: 0;
+}
+
+h3 {
+    color: #ff6347; /* Coral for subheadings */
+}
+
+.ingredients-bar,
+.instructions-bar {
+    background-color: #4d4d4d; /* Darker background for bars */
+    border: 1px solid #ff6347; /* Coral border */
+    border-radius: 5px; /* Rounded corners for bars */
+    padding: 10px;
+    margin-top: 10px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease; /* Smooth transition */
+}
+
+.ingredients-bar:hover,
+.instructions-bar:hover {
+    transform: scale(1.02); /* Slightly enlarge bars on hover */
+}
+
+.ingredients-bar h3,
+.instructions-bar h3 {
+    margin: 0 0 10px; /* Margin below headings */
+}
+
+.ingredients-bar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.ingredients-bar li,
+.instructions-bar p {
+    margin: 5px 0; /* Spacing between items */
+    color: #ffffff; /* Light text color */
+}
+
+.instructions-bar {
+    display: none; /* Initially hidden */
+}
+
+/* Additional styles for better spacing and aesthetics */
+h2 {
+    margin-bottom: 10px; /* Space below the meal title */
+}
+
+.card .ingredients-bar,
+.card .instructions-bar {
+    transition: transform 0.3s ease;
+}
+
+.card .ingredients-bar:hover,
+.card .instructions-bar:hover {
+    transform: scale(1.02); /* Slightly enlarge bars on hover */
+}
+
+#search {
+    width: 350px;
+    margin: auto;
+}
